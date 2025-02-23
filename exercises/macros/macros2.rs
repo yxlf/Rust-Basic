@@ -4,13 +4,15 @@
 // hint.
 
 // I AM NOT DONE
-
-fn main() {
-    my_macro!();
-}
-
 macro_rules! my_macro {
     () => {
         println!("Check out my macro!");
     };
+    ($($arg:tt)*) => {{
+        println!($($arg)*);
+}};
+}
+
+fn main() {
+    my_macro!("{}", "你怎么啦");
 }
