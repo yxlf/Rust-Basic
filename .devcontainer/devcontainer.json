@@ -13,5 +13,8 @@
         "rust-lang.rust-analyzer"
       ]
     }
-  }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/codespace/.ssh,type=bind,consistency=cached"
+  ]
 }
